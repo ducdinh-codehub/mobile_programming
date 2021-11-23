@@ -29,7 +29,7 @@ void main() => runApp(
 //}
 
 //Second example
-class MyApp extends StatelessWidget{
+/*class MyApp extends StatelessWidget{
   @override
   Widget build(BuildContext context){
     return MaterialApp(
@@ -56,6 +56,133 @@ class MyApp extends StatelessWidget{
           ),
         ),
       ),
+    );
+  }
+}*/
+
+// Third example
+/*class MyApp extends StatelessWidget{
+  @override
+  Widget build(BuildContext context){
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(title: Text('App Title')),
+        body: Center(
+          child: Column(
+            children:[
+              Container(
+                height: 300,
+                width: double.infinity,
+                color: Colors.deepOrangeAccent,
+              ),
+              CircleAvatar(
+                radius: 60,
+                child: Icon(Icons.face, size:120),
+              ),
+              Container(
+                padding: EdgeInsets.only(left: 10, right: 10),
+                height: 140,
+                width: double.infinity,
+                child: Card(
+                  color: Colors.amber,
+                  elevation: 5,
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}*/
+
+// Forth example
+/*class MyApp extends StatelessWidget{
+  @override
+  Widget build(BuildContext context){
+    return MaterialApp(
+    home: Scaffold(
+      appBar: AppBar(title: Text('App Title')),
+      body: SafeArea(
+        child: Stack(
+          children:[
+            Container(
+              height: 300,
+              width: double.infinity,
+              color: Colors.deepOrangeAccent,
+            ),
+
+            Container(
+              alignment: Alignment.topCenter,
+              margin: EdgeInsets.only(top: 20),
+              child: CircleAvatar(
+                radius: 60,
+                child: Icon(Icons.face, size: 120),
+              ),
+            ),
+            
+            Container(
+              margin: EdgeInsets.only(top: 260),
+              padding: EdgeInsets.only(left: 10, right: 10),
+              height: 100,
+              width: double.infinity,
+              
+              child: Card(
+                color: Colors.white,
+                elevation: 3,
+              ),
+            ),
+          ],
+        ),
+      ),
+    ),
+    );
+  }
+}*/
+
+// Requirements
+class MyApp extends StatelessWidget{
+  @override
+  Widget build(BuildContext context){
+    return MaterialApp(
+    home: Scaffold(
+      appBar: AppBar(title: Text('App Title')),
+      body: SafeArea(
+        child: Stack(
+          children:[
+            Container(
+              height: 300,
+              width: double.infinity,
+              color: Colors.deepOrangeAccent,
+            ),
+            Column(
+              children: [
+                Container(
+                  alignment: Alignment.topCenter,
+                  margin: EdgeInsets.only(top: 20),
+                  child: CircleAvatar(
+                    radius: 60,
+                    child: Icon(Icons.face, size: 120),
+                  ),
+                ),
+              ],
+            ),
+            
+            Container(
+              margin: EdgeInsets.only(top: 260),
+              padding: EdgeInsets.only(left: 10, right: 10),
+              height: 100,
+              width: double.infinity,
+              
+              child: Card(
+                color: Colors.white,
+                elevation: 3,
+              ),
+            ),
+          ],
+        ),
+      ),
+    ),
     );
   }
 }
