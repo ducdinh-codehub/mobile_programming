@@ -141,6 +141,8 @@ void main() => runApp(
 }*/
 
 // Requirements
+// First requirement added column widget
+/*
 class MyApp extends StatelessWidget{
   @override
   Widget build(BuildContext context){
@@ -183,6 +185,106 @@ class MyApp extends StatelessWidget{
         ),
       ),
     ),
+    );
+  }
+}*/
+
+class MyApp extends StatelessWidget{
+  @override
+  Widget build(BuildContext context){
+    return MaterialApp(
+      home: Scaffold(
+          appBar: AppBar(title: Text('Duc\'s app title'), backgroundColor: Colors.red),
+          body: SafeArea(
+            
+            child: Stack(
+              
+              children: [
+                Container(
+                  height: 300,
+                  width: double.infinity,
+                  color: Colors.deepOrangeAccent
+                ),
+                Column(
+                  children:[
+                  Container(
+                    alignment: Alignment.topCenter,
+                    margin: EdgeInsets.only(top: 20),
+                    child: CircleAvatar(
+                      radius: 60,
+                      child: Icon(Icons.adb_rounded, size:120),
+                    ),
+                  ),
+                  ],
+                ),
+                Container(
+                  margin: EdgeInsets.only(top: 260),
+                  padding: EdgeInsets.only(left: 10, right: 10),
+                  height: 100,
+                  width: double.infinity,
+
+                  child: Card(
+                    color: Colors.red,
+                    elevation: 3,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children:[
+                            Text(
+                              'Photo',
+                              style: TextStyle(color: Colors.black54),
+                            ),
+                            Text(
+                              '5,000',
+                              style: TextStyle(
+                                color: Colors.black87,
+                                fontSize: 16,
+                              ),
+                            ),
+                          ],
+                        ),
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            Text(
+                              'Photo',
+                              style: TextStyle(color: Colors.black54),
+                            ),
+                            Text(
+                              '5,000',
+                              style: TextStyle(
+                                color: Colors.black87,
+                                fontSize: 16,
+                              ),
+                            ),
+                          ]
+                        ),
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            Text(
+                              'Photo',
+                              style: TextStyle(color: Colors.black54),
+                            ),
+                            Text(
+                              '5,000',
+                              style: TextStyle(
+                                color: Colors.black87,
+                                fontSize: 16,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ), 
     );
   }
 }
