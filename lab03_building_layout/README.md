@@ -8,4 +8,6 @@ Student ID: M20.ICT.001
 <h3>The title and button section</h3>
 <img src="../images/lab03_title_button_section.png">
 </br>
+<h3>Added text section</h3>
+<img src="../images/lab03_added_text_section.png">
 </html>
