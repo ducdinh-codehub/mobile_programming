@@ -37,8 +37,14 @@ class MyApp extends StatelessWidget{
           title: const Text('FLutter layout demo'),
         ),
       
-        body: Column(
+        body: ListView(
           children:[
+            Image.asset(
+              './images/lake.jpg',
+              width: 600,
+              height: 240,
+              fit: BoxFit.cover,
+            ),
             Container(
               padding: const EdgeInsets.all(32),
                 child: Row(
