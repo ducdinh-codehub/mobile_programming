@@ -190,11 +190,13 @@ class MyApp extends StatelessWidget{
 }*/
 
 class MyApp extends StatelessWidget{
+  const MyApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context){
     return MaterialApp(
       home: Scaffold(
-          appBar: AppBar(title: Text('Duc\'s app title'), backgroundColor: Colors.red),
+          appBar: AppBar(title: const Text('Duc\'s app title'), backgroundColor: Colors.red),
           body: SafeArea(
             
             child: Stack(
