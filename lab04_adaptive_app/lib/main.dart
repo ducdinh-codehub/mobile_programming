@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
-        visualDensity: VisualDensity(horizontal: 4.0, vertical: 4.0),
+        visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -50,10 +50,11 @@ class _MyHomePageState extends State<MyHomePage> {
 }
 
 class PersonDetail extends StatelessWidget{
-  //const PersonDetail({Key? key}) : super(key: key);
+  //PersonDetail({Key? key}) : super(key: key);
+  const PersonDetail({Key? key, required this.person}) : super(key: key);
   final Person person;
   // ignore: 
-  const PersonDetail(this.person);
+  //const PersonDetail(this.person);
   @override
   Widget build(BuildContext context){
     
@@ -64,8 +65,10 @@ class PersonDetail extends StatelessWidget{
         children:[
           Text(person.name),
           Text(person.phone),
-          RaisedButton(onPressed: null, 
-          child: Text("Contact Me"),)
+          RaisedButton(
+            onPressed: ()=>{},
+            hoverColor: Colors.blue, 
+            child: const Text("Contact Me"),)
         ],
       ),
     );
@@ -73,6 +76,8 @@ class PersonDetail extends StatelessWidget{
 }
 
 class NarrowLayout extends StatelessWidget{
+  //const NarrowLayout({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context){
     return PeopleList(
@@ -80,7 +85,7 @@ class NarrowLayout extends StatelessWidget{
         MaterialPageRoute(
           builder: (context) => Scaffold(
             appBar: AppBar(),
-            body: PersonDetail(person)
+            body: PersonDetail(person: person),
           ),
         ),
       ),
@@ -108,7 +113,7 @@ class _WideLayoutState extends State<WideLayout>{
             ),
             width: 250,
           ),
-        Expanded(child: _person == null ? Placeholder() : PersonDetail(_person), flex: 3,),
+        Expanded(child: _person == null ? Placeholder() : PersonDetail(person: _person), flex: 3,),
       ],
     );
   }
